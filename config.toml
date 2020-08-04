@@ -1,3 +1,13 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+googleAnalytics = "UA-123-456-789"
+theme = "github-style"
+copyright = "© 2019. Theme by <a href=\"https://github.com/MeiK2333/github-style\"><span>github-style</span></a>"
+
+[params]
+  author = "Tom Lamphier"
+  description = "Notebook Implementation with Hugo"
+  github = "example"
+  keywords = "blog, notebook"
+
