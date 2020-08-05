@@ -10,4 +10,5 @@ copyright = "© 2019. Theme by <a href=\"https://github.com/MeiK2333/github-styl
   description = "Notebook Implementation with Hugo"
   github = "example"
   keywords = "blog, notebook"
+  avatar = "images/tomlamphier.png"
 
