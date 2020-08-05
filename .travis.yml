@@ -5,5 +5,5 @@ script:
 - hugo version
 - make build
 branches:
- only
+ only:
  - master
