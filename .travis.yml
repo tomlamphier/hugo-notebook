@@ -1,4 +1,6 @@
 language: go
+go:
+- 1.14.4
 install:
 - go get -v github.com/gohugoio/hugo
 script:
