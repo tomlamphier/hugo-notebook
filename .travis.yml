@@ -2,11 +2,16 @@ language: go
 go:
 - 1.14.4
 install:
-  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.55.4/hugo_0.55.4_Linux-64bit.deb
-  - sudo dpkg -i hugo_0.55.4_Linux-64bit.deb
+- curl -LO https://github.com/gohugoio/hugo/releases/download/v0.55.4/hugo_0.55.4_Linux-64bit.deb
+- sudo dpkg -i hugo_0.55.4_Linux-64bit.deb
+- pip install --user awscli
 script:
 - hugo version
-- make build
+- make deploy
 branches:
- only:
- - master
+  only:
+  - master
+env:
+  global:
+  - secure: vywLoJ2r1SZqBo7RouP+pSlK4eXvMHLjfhU7O3nvNuEskBan3EXREcNgtT/LbPwjv62osoksuprdHFwkMdHdsbgLXOZ2jbmyFFoJ4aYlZX7QezHkA4ZMLiJ18Ma/HN60TcC+ExIcPr950xllIhEz4jaSIZYRquA5tu0uhqbzPTyau8S7U7ZWMVGXfNik86fg90lhhcfUnFuTc1yEvgYHmKSRgYS7m2XECM3jRjFIz9pSRmIziUtIBCFb/u/SOADARzE65YGPbHR2Qm47W8aQ+pQu+ur9NBlDQJ9FKNMw7DwJ3Ju9vP5X+AqJ8EagxG715XB2pwyyTy2kFPMtTmuvUc9iY4gXgHXyOFJM180k+NMSzelTkOMYFZcsQgkrnS/y45OXj3GwKBZgXH4gN/7Y/r37SeUdbVvCCIhed90KZsic6bHUkl4KkOC+R8Qt4AnUHuc2usSw/RvanZK9q5o3qqR7lSDP1F5z3BVSkD6aH5rXCSH0BYm27tnlCGaVYGlSzgzH3dzv0+Q/fLFgu59ZCrdcbvo949Q+RSaVLPGuomjjKWLL9gk8gdGLgY9oXsR7jzZDR+joJb2QTeVngWwsrXitlNp2vfjVvjzXm7kXD+KOlVZOycYvqwzrZ0e5ZjYWKuYyBOA0V323GnaCHcYqJyLhtwSTwVUQGf+aHEQAUok=
+  - secure: nL1QuwjATnsUa1WpOnRZiKqjPdb2MjeIsGbzJKsCR0AuJVbKBkx8mUAvDbL7SrFzTtMpNX7muOFT8cjfgD/IulZDt3vcAtwM6pZXX3zLKl/S8kv2BinxXzzKSBzz4UX4ecXozqmmislhuAWrTqDA875/RyCWHMd8WZAMf+xLB+vcge+73L7G26L3zcG7BzIXLqAhip/qmsUGnsv1JWkWtClsaVh9uPUJUrwFlXJKWhQm14fqqPjeCfvbxovycOVVrrXmufoy6aX/qiAsU7Q6tXoQQ4Jg9L2waNcRtOXt/1rq6MQu6tKWcC+I4cE+XbPUwbe1amFon0iOhXGaLsS9C5tfyNgW2iKd/FTuvXzMOYFcvPd7COe+hDVd9+OA78P5+vNGrZDFXLWkGcgnUTabBEilbIaywj4QkltCyMW4CdIVBV84dLPuIwlyPusxxz1aQTM0oiVPgSw27ZzYrUm7tSN+5QohpmPE6BMn9sprUEEDFZyrn7BrE1kRAzr76pbBQBjJ9gPd2S+qLuls6Q9dDR+TkHrKnc/62PAyrfMGtsDGp6YGlLNK2otPUXCVrrRZfl+SYvvIORuDnTU/hXYQfKIyg2XdAc4NjZGIg49hSbzr8Wbcx7VtzsAwHiX4BPvTLG+AIqaH0yAiBtS+fg9EZ5hdUzneXR6svCzcE6fKT8s=
