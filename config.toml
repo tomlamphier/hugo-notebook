@@ -1,4 +1,4 @@
-baseURL = "http://hugo-notebook.com/"
+baseURL = "http://hugonotebook.com/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 googleAnalytics = "UA-123-456-789"
