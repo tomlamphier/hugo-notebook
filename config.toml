@@ -7,7 +7,7 @@ copyright = "© 2019. Theme by <a href=\"https://github.com/MeiK2333/github-styl
 
 [params]
   author = "Tom Lamphier"
-  description = "Notebook Implementation with Hugo"
+  description = "Notebook Implementation with Hugo II"
   github = "example"
   keywords = "blog, notebook"
   avatar = "images/tomlamphier.png"
