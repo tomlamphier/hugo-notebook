@@ -4,4 +4,4 @@ build:
 deploy: build
 	aws s3 sync public/ s3://hugo-notebook --acl public-read --delete
 	aws configure set preview.cloudfront true
-	aws cloudfront create-invalidation --distribution-id E2XY5Z7SOLBAI6 --paths '/*'
+	aws cloudfront create-invalidation --distribution-id EEHX40YDDE6CR --paths '/*'
