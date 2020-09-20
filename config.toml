@@ -1,4 +1,8 @@
 baseURL = "https://www.hugo-notebook.com/"
 languageCode = "en-us"
 title = "Hugo Tech Notebook / Blog"
+theme = "basic"
+[params]
+  description = "A personal collection of technical notebooks"
+
 

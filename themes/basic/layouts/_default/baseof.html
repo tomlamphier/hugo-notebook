@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div id="content">
+            <div class="notebook-sidebar">
+                {{- block "sidebar" . -}}{{- end }}
+            </div>
+            <div class="notebook-body">
+                {{- block "main" . }}{{- end }}
+            </div>
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>
