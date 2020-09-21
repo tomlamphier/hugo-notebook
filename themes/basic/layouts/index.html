@@ -1,6 +1,33 @@
 {{ define "sidebar" }}
-sidebar content here
+<div id="sidebar-photo">
+<img id="myphoto" src="{{ "images/tomlamphier.png" | relURL }}" alt="My Picture">
+Tom Lamphier
+    <div class="notebook-links">
+        Notebooks
+        <p>
+        <a href="{{ "argon" | relURL}}">Argon - First Cut</a>
+        </p>
+    </div>
+</div>
 {{ end }}
 {{ define "main" }}
-body content here
+<h2>Welcome</h2>
+<p>
+This website has multiple purposes.  The first is to present articles about
+projects I'm working on or trending topics in the computer field.  The second purpose--and
+the more ambitious one--is to organize my notes from studying various technologies, such as
+the Go language, Spring Boot, and Angular.
+</p>
+<p>
+I think I'm like many computer professionals in that I get carried away by new technologies
+as they come along.  I'll read the book, take a course, learn a great deal, make notes on my
+computer.  Time goes by, and I gradually forget what I struggled so hard to learn.  If only
+I had some way of maintaining what I learned, I'd feel more of a sense of mastering new
+skills.
+</p>
+<p>
+I don't think there is enough on the web about how to take good notes.
+My goal with this website is to develop effective ways of maintaining technical notes and to
+share what I learn.
+</p>
 {{ end }}
