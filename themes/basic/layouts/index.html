@@ -50,7 +50,10 @@ share what I learn.
             </p>
         </header>
         <section class="body">
-            {{ .Content }}
+            {{ .Description }}
+            <p style="margin-left: -6px;">
+                <a class="full-text link-button" href="{{ .Permalink | relURL }}">Full Article</a>
+            </p>
         </section>
     </article>    {{ end }}
 </section>
