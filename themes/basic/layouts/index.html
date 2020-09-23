@@ -3,9 +3,15 @@
 <img id="myphoto" src="{{ "images/tomlamphier.png" | relURL }}" alt="My Picture">
 Tom Lamphier
     <div class="notebook-links">
+        Blog
+        <p>
+        <a class="link-button" href="{{ "posts" | relURL}}">Go to Posts</a>
+        </p>
+    </div>
+    <div class="notebook-links">
         Notebooks
         <p>
-        <a href="{{ "argon" | relURL}}">Argon - First Cut</a>
+            <a class="link-button" href="{{ "argon" | relURL}}">Argon - First Cut</a>
         </p>
     </div>
 </div>
@@ -30,4 +36,22 @@ I don't think there is enough on the web about how to take good notes.
 My goal with this website is to develop effective ways of maintaining technical notes and to
 share what I learn.
 </p>
+<section class="latest-posts">
+    <h2>Recent Posts</h2>
+    {{ range first 3 (where .Site.RegularPages "Type" "in" "posts").ByDate.Reverse }}
+    <article class="post">
+        <header>
+            <h3>{{ .Title }}</h3>
+            <p>
+                By {{ .Params.Author }}
+            </p>
+            <p>
+                Posted {{ .Date.Format "January 2, 2006" }}
+            </p>
+        </header>
+        <section class="body">
+            {{ .Content }}
+        </section>
+    </article>    {{ end }}
+</section>
 {{ end }}

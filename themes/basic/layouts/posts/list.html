@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="latest-posts">
+    <h3>- - -   Posts  - - - - - - - - - - - - - - - - - -</h3>
+    {{ range (where .Site.RegularPages "Type" "in" "posts").ByDate.Reverse }}
+        <article class="post">
+            <header>
+                <h3>{{ .Title }}</h3>
+                <p>
+                    By {{ .Params.Author }}
+                </p>
+                <p>
+                    Posted {{ .Date.Format "January 2, 2006" }}
+                </p>
+            </header>
+            <section class="body">
+                {{ .Summary }}
+            </section>
+            <p>
+                <a class="full-text link-button" href="{{ .Permalink | relURL }}">Full Article</a>
+            </p>
+        </article>
+        <hr/>
+    {{ end }}
+</section>
+{{ end }}
+
+{{ define "sidebar" }}
+<h3>Categories</h3>
+{{ range .Site.Taxonomies.categories }}
+<a class="tag link-text" href="{{ .Page.Permalink }}">{{ .Page.Title}} ({{ .Count }})</a>
+<br/>
+{{ end }}
+<h3>Tags</h3>
+    {{ range .Site.Taxonomies.tags }}
+        <a class="tag link-text" href="{{ .Page.Permalink }}">{{ .Page.Title}} ({{ .Count }})</a>
+        <br/>
+    {{ end }}
+{{ end }}
