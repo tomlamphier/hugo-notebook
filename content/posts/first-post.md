@@ -9,5 +9,6 @@ categories:
 tags:
 - tasks
 - reference
+description: Example post 1.
 ---
 First post for new Hugo Notebook.

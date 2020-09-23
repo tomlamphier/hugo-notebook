@@ -16,5 +16,14 @@
 {{ end }}
 
 {{ define "sidebar" }}
-    aaaaaaaaa
+<h3>Categories</h3>
+{{ range .Site.Taxonomies.categories }}
+<a class="tag link-text" href="{{ .Page.Permalink }}">{{ .Page.Title}} ({{ .Count }})</a>
+<br/>
+{{ end }}
+<h3>Tags</h3>
+{{ range .Site.Taxonomies.tags }}
+<a class="tag link-text" href="{{ .Page.Permalink }}">{{ .Page.Title}} ({{ .Count }})</a>
+<br/>
+{{ end }}
 {{ end }}
