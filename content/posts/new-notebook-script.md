@@ -23,10 +23,10 @@ is main.  Update folder ID in Makefile for S3 bucket.
 git commit.  
 
 4. Go to themes.gohugo.io/hugo-book, get install cmds & run them to
-add book theme as a git sub-project.  Do git add --all, commit, 
-push -u origin main.
+add book theme as a git sub-project.  Do git add --all, commit. New
+github repo, follow instructions for first push -u origin main.
 
-5. Remove encrypted AWS credentials from Makefile. Go to travis-ci-com ->
+5. Remove encrypted AWS credentials from .travis.yml. Go to travis-ci-com ->
 settings -> add new github repo to list. 
 
 6. travis encrypt --pro AWS_ACCESS_KEY_ID=<cut & paste key frpm Downloads/travis> --add
