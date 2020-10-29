@@ -35,3 +35,5 @@ settings -> add new github repo to list.
    Do git add, commit, push.
    
 7. Travis should kick off a build/deploy. Check travis-ci.com.
+
+8. Update list of notebooks in hugo-notebook/themes/basic/layouts/index.html, git add, commit, push.
