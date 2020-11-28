@@ -30,10 +30,15 @@ github repo, follow instructions for first push -u origin main.
 settings -> add new github repo to list. 
 
 6. travis encrypt --pro AWS_ACCESS_KEY_ID=<cut & paste key frpm Downloads/travis> --add
-   say yes to repo
-   travis encrypt --pro AWS_SECRET_ACCESS_KEY=<cut & paste key> --add
+   --pro say yes to repo
+   travis encrypt --pro AWS_SECRET_ACCESS_KEY=<cut & paste key> --add --pro
    Do git add, commit, push.
    
 7. Travis should kick off a build/deploy. Check travis-ci.com.
 
 8. Update list of notebooks in hugo-notebook/themes/basic/layouts/index.html, git add, commit, push.
+
+### Comments
+
+It seems that travis limits you to 5 repos with automatic deployment.  My
+6th. repo requires a manual deploy.
